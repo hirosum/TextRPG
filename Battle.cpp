@@ -6,7 +6,6 @@
  */
 
 #include "Battle.h"
-
 Battle::Battle() {
 	// TODO Auto-generated constructor stub
 

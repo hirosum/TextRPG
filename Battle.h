@@ -8,9 +8,14 @@
 #ifndef BATTLE_H_
 #define BATTLE_H_
 
+#include <vector>
+
+
+
 class Battle {
 public:
 	Battle();
+
 	virtual ~Battle();
 };
 
