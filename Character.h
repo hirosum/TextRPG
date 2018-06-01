@@ -19,30 +19,30 @@ class Character {
 private:
 	string 			m_name;
 	char 			m_gender;
-	unsigned int 	m_level;
+	uint 	m_level;
 	Race			m_race;
 
-	unsigned int 	m_maxHealth;
-	unsigned int 	m_strength;
-	unsigned int 	m_endurance;
-	unsigned int 	m_agility;
-	unsigned int 	m_intelligence;
+	uint 	m_maxHealth;
+	uint 	m_strength;
+	uint 	m_endurance;
+	uint 	m_agility;
+	uint 	m_intelligence;
 
 	void initialStats();
 public:
 	Character();
-	Character(string name, char gender, unsigned int level, Race race);
+	Character(string name, char gender, uint level, Race race);
 	virtual ~Character();
 	char getGender(){return m_gender;}
 	string getGenderStr();
 	string getName(){return m_name;}
 	string getRaceStr();
-	unsigned int getLevel(){return m_level;}
-	unsigned int getStrength(){return m_strength;}
-	unsigned int getEndurance(){return m_endurance;}
-	unsigned int getAgility(){return m_agility;}
-	unsigned int getIntelligence(){return m_intelligence;}
-	unsigned int getMaxHealth(){return m_maxHealth;}
+	uint getLevel(){return m_level;}
+	uint getStrength(){return m_strength;}
+	uint getEndurance(){return m_endurance;}
+	uint getAgility(){return m_agility;}
+	uint getIntelligence(){return m_intelligence;}
+	uint getMaxHealth(){return m_maxHealth;}
 };
 
 #endif /* CHARACTER_H_ */

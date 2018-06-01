@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
-#include "character.h"
+#include "PlayerCharacter.h"
 
 using namespace std;
 
@@ -19,7 +19,7 @@ void showStatsScreen(Character &c)
 	cout << "Intelligence: " << c.getIntelligence() << endl;
 }
 
-void characterCreation(Character &c)
+void characterCreation(PlayerCharacter &c)
 {
 	bool incorrectInput = true;
 	string name;
@@ -77,12 +77,12 @@ void characterCreation(Character &c)
 			cout << "Incorrect input." << endl;
 		}
 	}
-	c = Character(name,genderChar,1, race);
+	c = PlayerCharacter(name,genderChar,1, race);
 }
 
 int main(void)
 {
-	Character player;
+	PlayerCharacter player;
 	characterCreation(player);
 	showStatsScreen(player);
 

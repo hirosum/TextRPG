@@ -16,7 +16,7 @@ Character::Character()
 	initialStats();
 }
 
-Character::Character(string name, char gender, unsigned int level, Race race)
+Character::Character(string name, char gender, uint level, Race race)
 {
 	m_name 		= name;
 	m_gender 	= gender;

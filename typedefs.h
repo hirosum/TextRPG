@@ -8,6 +8,7 @@
 #ifndef TYPEDEFS_H_
 #define TYPEDEFS_H_
 
+using uint = unsigned int;
 
 enum Race
 {

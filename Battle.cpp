@@ -11,6 +11,11 @@ Battle::Battle() {
 
 }
 
+Battle::Battle(PlayerCharacter* c)
+{
+	playerPtr = c;
+}
+
 Battle::~Battle() {
 	// TODO Auto-generated destructor stub
 }
