@@ -12,6 +12,8 @@
 #include "PlayerCharacter.h"
 #include "typedefs.h"
 
+float CHALLENGE_MOD = 0.5f;
+
 class Battle {
 public:
 	Battle();
@@ -19,8 +21,10 @@ public:
 	virtual ~Battle();
 
 private:
-	PlayerCharacter* 	playerPtr;
-	Character 			enemies[4];
+	PlayerCharacter* 	m_playerPtr;
+	Character 			m_enemies[4];
+	float				m_challenge;
+	uint				m_noOfEnemies;
 };
 
 #endif /* BATTLE_H_ */

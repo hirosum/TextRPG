@@ -16,11 +16,11 @@ using namespace std;
 
 class Character {
 
-private:
-	string 			m_name;
-	char 			m_gender;
+protected:
+	string 	m_name;
+	char 	m_gender;
 	uint 	m_level;
-	Race			m_race;
+	Race	m_race;
 
 	uint 	m_maxHealth;
 	uint 	m_strength;
@@ -28,10 +28,12 @@ private:
 	uint 	m_agility;
 	uint 	m_intelligence;
 
-	void initialStats();
 public:
 	Character();
 	Character(string name, char gender, uint level, Race race);
+	Character(string name, char gender, uint level, Race race,
+				uint maxHealth, uint strength, uint endurance,
+				uint agility, uint intelligence);
 	virtual ~Character();
 	char getGender(){return m_gender;}
 	string getGenderStr();

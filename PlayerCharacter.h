@@ -15,6 +15,8 @@ public:
 	PlayerCharacter();
 	PlayerCharacter(string name, char gender, uint level, Race race);
 	virtual ~PlayerCharacter();
+private:
+	void initialStats();
 };
 
 #endif /* PLAYERCHARACTER_H_ */

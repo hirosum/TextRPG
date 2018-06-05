@@ -13,7 +13,12 @@ Character::Character()
 	m_gender	= 'D';
 	m_level		= 0;
 	m_race		= Race::DEFAULT;
-	initialStats();
+
+	m_maxHealth 	= 0;
+	m_strength 		= 0;
+	m_endurance 	= 0;
+	m_agility 		= 0;
+	m_intelligence 	= 0;
 }
 
 Character::Character(string name, char gender, uint level, Race race)
@@ -22,7 +27,25 @@ Character::Character(string name, char gender, uint level, Race race)
 	m_gender 	= gender;
 	m_level 	= level;
 	m_race		= race;
-	initialStats();
+	m_maxHealth 	= 0;
+	m_strength 		= 0;
+	m_endurance 	= 0;
+	m_agility 		= 0;
+	m_intelligence 	= 0;
+}
+Character::Character(string name, char gender, uint level, Race race,
+						uint maxHealth, uint strength, uint endurance,
+						uint agility, uint intelligence)
+{
+	m_name 		= name;
+	m_gender 	= gender;
+	m_level 	= level;
+	m_race		= race;
+	m_maxHealth 	= maxHealth;
+	m_strength 		= strength;
+	m_endurance 	= endurance;
+	m_agility 		= agility;
+	m_intelligence 	= intelligence;
 }
 
 Character::~Character()
@@ -55,40 +78,5 @@ string Character::getRaceStr()
 		return "Elf";
 	default:
 		return "Default";
-	}
-}
-
-void Character::initialStats()
-{
-	switch(m_race)
-	{
-	case Race::HUMAN:
-		m_maxHealth = 100;
-		m_strength = 5;
-		m_endurance = 5;
-		m_agility = 5;
-		m_intelligence = 5;
-		return;
-	case Race::DWARF:
-		m_maxHealth = 80;
-		m_strength = 6;
-		m_endurance = 6;
-		m_agility = 3;
-		m_intelligence = 5;
-		return;
-	case Race::ELF:
-		m_maxHealth = 60;
-		m_strength = 4;
-		m_endurance = 4;
-		m_agility = 6;
-		m_intelligence = 7;
-		return;
-	default:
-		m_maxHealth = 100;
-		m_strength = 5;
-		m_endurance = 5;
-		m_agility = 5;
-		m_intelligence = 5;
-		return;
 	}
 }

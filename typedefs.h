@@ -12,10 +12,18 @@ using uint = unsigned int;
 
 enum Race
 {
-	DEFAULT = 0,
 	HUMAN 	= 1,
 	DWARF 	= 2,
-	ELF		= 3
+	ELF		= 3,
+	DEFAULT = 255
+};
+
+enum EnemyGroup
+{
+	RAT		= 1,
+	SPIDER 	= 0,
+	GOBLIN 	= 1,
+	RAIDER  = 2
 };
 
 

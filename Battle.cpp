@@ -7,13 +7,17 @@
 
 #include "Battle.h"
 Battle::Battle() {
-	// TODO Auto-generated constructor stub
-
+	m_playerPtr = NULL;
+	m_challenge = 0.0f;
+	m_noOfEnemies = 0;
 }
 
 Battle::Battle(PlayerCharacter* c)
 {
-	playerPtr = c;
+	m_playerPtr = c;
+	m_challenge = CHALLENGE_MOD * c->getLevel();
+	m_noOfEnemies = 1;
+
 }
 
 Battle::~Battle() {
